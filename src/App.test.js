@@ -3,12 +3,12 @@ import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
 it('renders a welcome message when signed out', async () => {
-// eslint-disable-next-line
+  //eslint-disable-next-line
   const { container } = render(
     <MemoryRouter>
       <App />
     </MemoryRouter>
   );
 
-  await screen.findByRole('list', { name: 'book list' });
+  await screen.findByText('Library Catalog');
 });

@@ -9,16 +9,12 @@ function App() {
   return (
     <main className="App">
       <h1>Library Catalog</h1>
-
       <Switch>
         <Route exact path="/" component={ Home }>
-          <Home />
         </Route>
         <Route path="/books/:id" component={ BookDetail }>
-          <BookDetail />
         </Route>
         <Route path="/books/" component={ BookList }>
-          <BookList />
         </Route>
       </Switch>
 
