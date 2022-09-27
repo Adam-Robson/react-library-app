@@ -17,7 +17,7 @@ function BookDetail() {
 
   return (
 
-    <Book book={ book } showDetail={ true } />
+    <Book book={ book } showDetail />
   );
 }
 export default BookDetail;
