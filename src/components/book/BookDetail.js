@@ -3,8 +3,8 @@ import Book from './Book';
 import { useBookDetail } from '../../hooks/useBookDetail';
 
 function BookDetail() {
-  const id = useParams(); // TODO: Use id from route
-  const { book, loading, error } = useBookDetail(id);
+  const { id } = useParams(); // TODO: Use id from route
+  const { book, loading, error } = useBookDetail({ id });
 
   if (error)
     return (
@@ -15,7 +15,9 @@ function BookDetail() {
 
   if (loading) return <h3>Loading book...</h3>;
 
-  return <Book book={book} showDetail />;
-}
+  return (
 
+    <Book book={ book } showDetail/>
+  );
+}
 export default BookDetail;

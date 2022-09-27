@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Author from '../author/Author';
 import './Book.css';
 
@@ -7,11 +8,17 @@ function Book({
 }) {
   return (
     <article className="book">
-      <h3>{title}</h3>
-      <address>
-        {authors.map((author) => (
-          <Author key={author.author_id} author={author} />
-        ))}
+
+      { showDetail && (
+        <>
+          <Link to={ '/books' }>&laquo; Back to Catalogue</Link>
+          <hr />
+        </>
+      ) }
+      <h3>{ title }</h3><address>
+        { authors.map((author) => (
+          <Author key={ author.author_id } author={ author } />
+        )) }
       </address>
       {showDetail && (
         <>

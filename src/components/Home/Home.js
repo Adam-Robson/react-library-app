@@ -5,13 +5,9 @@ function Home() {
   return (
     <section>
       <h2>Welcome to Dangalfs Library of Computer Science!</h2>
-      <h3 className="home">
-        Check out the amazing selection of books in our{ ' ' }
-        <Link to="/books" aria-label="link to book list">
-          catalog
-        </Link>
-        .
-      </h3>
+      <p className="home">
+        Check out the amazing selection of books in our { ' ' }
+        <Link to={ '/books' }>catalog</Link>.</p>
     </section>
   );
 }
